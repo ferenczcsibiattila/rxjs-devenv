@@ -2,7 +2,6 @@
 
 Playground for rxjs
 
-Prepared like this:
 
 ```bash
 $ npm install --global yarn
@@ -34,8 +33,15 @@ Package                      Version
 @angular-devkit/schematics   14.2.3 (cli-only)
 @schematics/angular          14.2.3 (cli-only)
 ```
+## Add more dependecies, tools
 
-## TypeScript project inicializálása
+```bash
+$ yarn add rxjs webpack webpack-dev-server typescript ts-loader @babel/core @babel/preset-env babel-loader babel-polyfill esm
+
+$ yarn add webpack-cli --dev
+```
+
+## Init project
 
 ```bash
 ❯ yarn init
@@ -43,19 +49,18 @@ yarn init v1.22.19
 question name (01kod):
 question version (1.0.0):
 question description: RxJS kódolás 01
-question entry point (index.js): src/app.ts
+question entry point (index.js): src/index.ts
 question repository url:
 question author: Ferencz-Csibi Attila
 question license (MIT):
 question private:
 success Saved package.json
 ✨  Done in 57.57s.
+```
 
+## Prepare config files
 
-$ yarn add rxjs webpack webpack-dev-server typescript ts-loader @babel/core @babel/preset-env babel-loader babel-polyfill esm
-
-$ yarn add webpack-cli --dev
-
+```bash
   // Add this to package.json
   ...
   "scripts": {
@@ -109,6 +114,10 @@ $ yarn add webpack-cli --dev
       "allowJs": true
     }
   }
+```
 
+## Run
+
+```bash
 $ yarn run start
 ```

@@ -1,0 +1,22 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 3em 0 1em;
+}
+
+p,
+ul,
+ol {
+	margin-bottom: 2em;
+	color: #1d1d1d;
+	font-family: sans-serif;
+}
+
+#event-square {
+	width: 300px;
+	height: 300px;
+	border: solid #1d1d1d 1px;
+}

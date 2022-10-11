@@ -121,3 +121,69 @@ success Saved package.json
 ```bash
 $ yarn run start
 ```
+
+## Cypress for e2e testing (optional)
+
+```bash
+yarn add cypress -D
+```
+
+This adds a desktop app and a cli tool.
+
+Opening desktop app:
+
+```bash
+npx cypress open
+```
+
+Generates files:
+
+- cypress.config.ts - The cypress config files for e2e testing
+- cypress/support/e2e.ts - the support file that is bundled and loaded before each e2e test
+- cypress/support/commands.ts - A support files that is usefull to create custom commands and overwriting existing ones
+- cypress/fixtures/example.json - added example fixtures file/folder
+
+cypress tree
+
+```bash
+.
+├── cypress
+│   ├── downloads
+│   ├── fixtures
+│   │   └── example.json
+│   └── support
+│       ├── commands.ts
+│       └── e2e.ts
+└── cypress.config.ts
+```
+
+Examples
+
+```bash
+├── cypress
+│   ├── ...
+│   ├── e2e
+│   │   ├── 1-getting-started
+│   │   │   └── todo.cy.js
+│   │   └── 2-advanced-examples
+│   │       ├── actions.cy.js
+│   │       ├── aliasing.cy.js
+│   │       ├── assertions.cy.js
+│   │       ├── connectors.cy.js
+│   │       ├── cookies.cy.js
+│   │       ├── cypress_api.cy.js
+│   │       ├── files.cy.js
+│   │       ├── local_storage.cy.js
+│   │       ├── location.cy.js
+│   │       ├── misc.cy.js
+│   │       ├── navigation.cy.js
+│   │       ├── network_requests.cy.js
+│   │       ├── querying.cy.js
+│   │       ├── spies_stubs_clocks.cy.js
+│   │       ├── traversal.cy.js
+│   │       ├── utilities.cy.js
+│   │       ├── viewport.cy.js
+│   │       ├── waiting.cy.js
+│   │       └── window.cy.js
+└   └── ...
+```
